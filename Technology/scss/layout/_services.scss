@@ -1,0 +1,99 @@
+.services {
+    padding: 50px 0;
+    position: relative;
+
+
+    @media($medium) {
+        padding: 100px 0;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: rgb(62, 52, 152);
+        background: linear-gradient(180deg, rgba(62, 52, 152, 1) 0%, rgba(245, 170, 107, 1) 100%);
+        width: 140px;
+        height: 140px;
+        bottom: -75px;
+        left: -120px;
+        z-index: 3;
+
+        @media($medium) {
+            width: 280px;
+            height: 280px;
+            bottom: -140px;
+            left: -240px;
+        }
+    }
+
+
+    &__items {
+        height: 100%;
+        padding: 50px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        justify-items: center;
+
+        @media($small) {
+            padding-top: 80px;
+            grid-template-columns: repeat(2, minmax(350px, 40%));
+            grid-gap: 60px 30px;
+            justify-content: center;
+        }
+
+        @media($huge) {
+            grid-template-columns: repeat(2, minmax(350px, 35%));
+
+        }
+
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+
+        @media ($small) {
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        &-icon {
+            margin-bottom: 40px;
+
+            @media ($small) {
+                margin-bottom: 0;
+                margin-right: 40px;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            @media($small) {
+                text-align: left;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__title-small {
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        margin-bottom: 20px;
+        max-width: 325px;
+    }
+}

@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    padding: 0 10px;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+
+    @media ($small) {
+        width: 750px;
+    }
+
+    @media($medium) {
+        width: 970px;
+    }
+
+    @media ($large) {
+        width: 1170px;
+    }
+
+    @media ($huge) {
+        width: 1570px;
+    }
+}

@@ -1,0 +1,41 @@
+.blog {
+    min-height: 100vh;
+    padding: 100px 0;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__card {
+        &-picture-wrapper {
+            position: relative;
+
+            &::after {
+                content: attr(data-category) "";
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                height: 40px;
+                width: 82px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 10px;
+                background-color: #3E369A;
+                font-size: 1.4rem;
+                color: #fff;
+            }
+        }
+
+        &-date {
+            display: block;
+            color: #333;
+            font-size: 1.4rem;
+            line-height: 2;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__btn {
+        margin: 0 auto;
+    }
+}

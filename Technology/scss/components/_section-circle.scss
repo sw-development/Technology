@@ -1,0 +1,21 @@
+.section-circle {
+position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: rgb(62, 52, 152);
+        background: linear-gradient(180deg, rgba(62, 52, 152, 1) 0%, rgba(245, 170, 107, 1) 100%);
+        width: 140px;
+        height: 140px;
+        bottom: -75px;
+        left: -120px;
+z-index:2;
+        @media($medium) {
+            width: 280px;
+            height: 280px;
+            bottom: -140px;
+            left: -240px;
+        }
+    }
+}
